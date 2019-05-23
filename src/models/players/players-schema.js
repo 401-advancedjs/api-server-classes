@@ -3,6 +3,11 @@
 const mongoose = require('mongoose');
 require('mongoose-schema-jsonschema')(mongoose);
 
+/**
+ * Formats the player daya
+ * @const {object}
+ */
+
 const players = mongoose.Schema({
   name: { type:String, required:true },
   position: { type:String, required:true, uppercase:true, enum:['P','C','1B','2B','3B','SS','LF','RF','CF'] },
