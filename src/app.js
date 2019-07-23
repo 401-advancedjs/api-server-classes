@@ -22,6 +22,7 @@ const app = express();
 
 // App Level MW
 app.use(cors());
+app.use('/docs', express.static('docs'));
 app.use(morgan('dev'));
 
 app.use(express.json());
